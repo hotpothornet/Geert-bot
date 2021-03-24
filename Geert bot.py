@@ -1,7 +1,9 @@
 f = open("Geert.txt", "r")
+lines = []
 
-list_of_lists = [(line.strip()).split() for line in f]
+for line in f.readlines():
+    lines.append(line.replace('\n', ''))
+
+print(lines)
 
 f.close()
-
-print(list_of_lists)
